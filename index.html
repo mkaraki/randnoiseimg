@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random noise image generator</title>
+</head>
+
+<body>
+    <form action="gen.php" method="get">
+        <div>
+            <label for="width">Width</label>
+            <input type="number" name="w" id="width" value="512" min="1" max="1280" required>
+            <label for="height">Height</label>
+            <input type="number" name="h" id="height" value="512" min="1" max="720" required>
+        </div>
+        <div>
+            <label for="mode">Type</label>
+            <select name="m" id="mode">
+                <option value="colorful" selected>Colorful</option>
+                <option value="snow">Snow noise</option>
+                <option value="snowleak">Color leaked snow noise</option>
+                <option value="primary">Primary color only</option>
+                <option value="primarysnow">Primary color + black and white</option>
+            </select>
+        </div>
+        <br />
+        <input type="submit" value="Generate">
+    </form>
+</body>
+
+</html>
